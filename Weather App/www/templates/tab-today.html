@@ -3,8 +3,8 @@
   <!-- Main controller defined and data retrieved -->
   <ion-content ng-controller="WeatherDataCtrl">
     <!-- Item Devider for a subheader containing the date and day -->
-    <div ng-controller="DateDataCtrl" class="item item-divider">
-      {{getDay(0)}}, {{getDate(0)}}
+    <div class="item item-divider">
+      {{getDate(0) | date: 'fullDate'}}
     </div>
     <!-- Weather info and a summary icon thumbnail -->
     <div class="item item-text-wrap">

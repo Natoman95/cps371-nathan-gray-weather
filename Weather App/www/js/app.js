@@ -1,7 +1,7 @@
-var app = angular.module('weatherApp', ['ionic'])
+var app = angular.module('weatherApp', ['ionic']);
 
-app.run(function($ionicPlatform) {
-  $ionicPlatform.ready(function() {
+app.run(function ($ionicPlatform) {
+  $ionicPlatform.ready(function () {
     // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
     // for form inputs)
     if (window.cordova && window.cordova.plugins && window.cordova.plugins.Keyboard) {
@@ -16,15 +16,15 @@ app.run(function($ionicPlatform) {
   });
 });
 
-app.config(function($stateProvider, $urlRouterProvider) {
+app.config(function ($stateProvider, $urlRouterProvider) {
 
   $stateProvider
 
   // setup an abstract state for the tabs directive
-  .state('tab', {
-  url: '/tab',
-  abstract: true,
-  templateUrl: 'templates/tabs.html'
+    .state('tab', {
+    url: '/tab',
+    abstract: true,
+    templateUrl: 'templates/tabs.html'
   })
 
   // View displaying current weather

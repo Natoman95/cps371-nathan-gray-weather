@@ -5,60 +5,57 @@ app.service("picService", function () {
   this.getTempPic = function (temp) {
     if (temp <= 10) {
       pic = "img/freezing.png";
-    }
-    else if (temp <= 35) {
+    } else if (temp <= 35) {
       pic = "img/cold.png";
-    }
-    else if (temp <= 55) {
+    } else if (temp <= 55) {
       pic = "img/cool.png";
-    }
-    else if (temp <= 65) {
+    } else if (temp <= 65) {
       pic = "img/warm.png";
-    }
-    else if (temp <= 90) {
+    } else if (temp <= 90) {
       pic = "img/hot.png";
-    }
-    else {
+    } else {
       pic = "img/burning.png";
     }
     return pic;
-  }
+  };
 
   // Gets a picture related to the weather icon summary
   this.getIconPic = function (icon) {
-    if (icon == "clear-day") {
-      pic = "img/clear-day.png";
-    }
-    else if (icon == "clear-night") {
-      pic = "img/clear-night.png";
-    }
-    else if (icon == "rain") {
-      pic = "img/rain.png";
-    }
-    else if (icon == "snow") {
-      pic = "img/snow.png";
-    }
-    else if (icon == "sleet") {
-      pic = "img/sleet.png";
-    }
-    else if (icon == "wind") {
-      pic = "img/wind.png";
-    }
-    else if (icon == "fog") {
-      pic = "img/fog.png";
-    }
-    else if (icon == "cloudy") {
-      pic = "img/cloudy.png";
-    }
-    else if (icon == "partly-cloudy-day") {
-      pic = "img/partly-cloudy-day.png";
-    }
-    else if (icon == "partly-cloudy-night") {
-      pic = "img/partly-cloudy-night.png";
-    }
-    else {
-      pic = "img/clear-day.png"
+    switch (icon) {
+      case "clear-day":
+        pic = "img/clear-day.png";
+        break;
+      case "clear-night":
+        pic = "img/clear-night.png";
+        break;
+      case "rain":
+        pic = "img/rain.png";
+        break;
+      case "snow":
+        pic = "img/snow.png";
+        break;
+      case "sleet":
+        pic = "img/sleet.png";
+        break;
+      case "wind":
+        pic = "img/wind.png";
+        break;
+      case "fog":
+        pic = "img/fog.png";
+        break;
+      case "cloudy":
+        pic = "img/cloudy.png";
+        break;
+      case "partly-cloudy-day.png":
+        pic = "img/partly-cloudy-day.png";
+        break;
+      case "partly-cloudy-night.png":
+        pic = "img/partly-cloudy-night.png";
+        break;
+      default:
+        pic = "img/clear-day.png";
+        break;
     }
     return pic;
-  }
+  };
 });
