@@ -10,10 +10,10 @@
     <div class="item item-text-wrap">
       <a class="item item-thumbnail-right" href="#">
         <img src="{{getIconPic(0)}}">
-        Temp: {{getCurrentTemp()}}&deg F </br>
-        Dew Point: {{getDewPoint(0)}}&deg F </br>
-        Humidity: {{getHumidity(0)}} </br>
-        Summary: {{getSummary(0)}}
+        Temp: {{weather.currently.temperature}}&deg F </br>
+        Dew Point: {{weather.currently.dewPoint}}&deg F </br>
+        Humidity: {{weather.currently.humidity}} </br>
+        Summary: {{weather.daily[0].summary}}
       </a>
       <!-- A fun image based on the temperature -->
       <div class="item item-image">

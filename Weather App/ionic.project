@@ -1,4 +1,8 @@
 {
-  "name": "tabs",
-  "app_id": ""
+  "name": "app",
+  "app_id": "",
+  "proxies": [{
+   "path": "/app-server",
+   "proxyUrl": "http://cps-371-weather-app-server.appspot.com/"
+  }]
 }
