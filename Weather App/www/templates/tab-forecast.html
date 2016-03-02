@@ -12,13 +12,13 @@
       </div>
       <!-- Weather data and a fun image thumbnail corresponding to the
         temperature-->
-      <div class="item item-text-wrap">
-        <a class="item item-thumbnail-left" href="#">
+      <div>
+        <span class="item item-thumbnail-left" href="#">
           <img src="{{getTempPic(day)}}">
-          <p>High: {{weather.daily[day].maxTemp}}&deg F</p>
-          <p>Low: {{weather.daily[day].minTemp}}&deg F</p>
+          <p>Max: {{weather.daily[day].maxTemp}}&deg F</p>
+          <p>Min: {{weather.daily[day].minTemp}}&deg F</p>
           <p>{{weather.daily[day].summary}}</p>
-        </a>
+        </span>
       </div>
     </div>
   </ion-content>
